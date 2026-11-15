@@ -10,6 +10,29 @@ const projectGrid = document.getElementById('project-grid');
 const dialog = document.getElementById('project-dialog');
 const dialogContent = document.getElementById('dialog-content');
 let projectData = {};
+function renderProjectVideo(rawUrl, caption) {
+  if (!rawUrl) return '';
+  let url;
+  try { url = new URL(rawUrl.trim()); } catch { return ''; }
+  if (!['http:', 'https:'].includes(url.protocol)) return '';
+  const href = escapeHTML(url.href);
+  const host = url.hostname.replace(/^www\./, '').toLowerCase();
+  let embed = '';
+  if (host === 'youtu.be') {
+    const id = url.pathname.split('/').filter(Boolean)[0];
+    if (id) embed = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+  } else if (host.endsWith('youtube.com')) {
+    const id = url.searchParams.get('v') || url.pathname.match(/\/(?:shorts|embed)\/([^/?]+)/)?.[1];
+    if (id) embed = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+  } else if (host.endsWith('vimeo.com')) {
+    const id = url.pathname.match(/\/(?:video\/)?(\d+)/)?.[1];
+    if (id) embed = `https://player.vimeo.com/video/${encodeURIComponent(id)}`;
+  }
+  const captionHtml = caption ? `<p class="video-caption">${escapeHTML(caption)}</p>` : '';
+  if (embed) return `<div class="project-video-wrap"><div class="project-video-frame"><iframe src="${escapeHTML(embed)}" title="Project video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${captionHtml}</div>`;
+  if (/\.(mp4|webm|ogg)(?:$|[?#])/i.test(url.href)) return `<div class="project-video-wrap"><video controls playsinline preload="metadata" src="${href}"></video>${captionHtml}</div>`;
+  return `<div class="project-video-wrap"><a class="button button-dark project-video-link" href="${href}" target="_blank" rel="noopener noreferrer">Watch project video ↗</a>${captionHtml}<p class="video-caption">Opens on the original video platform.</p></div>`;
+}
 function renderProjects(projects) {
   projectData = {};
   projectGrid.innerHTML = (projects || []).map((project, index) => {
@@ -22,7 +45,7 @@ function renderProjects(projects) {
   if (count) count.textContent = String((projects || []).length).padStart(2, '0');
   projectGrid.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
     const project = projectData[button.closest('[data-project]').dataset.project]; if (!project) return;
-    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${project.video ? `<div class="project-video-wrap"><video controls playsinline preload="metadata" src="${escapeHTML(project.video)}"></video>${project.video_caption ? `<p class="video-caption">${escapeHTML(project.video_caption)}</p>` : ''}</div>` : ''}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
+    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
     dialog.showModal();
   }));
   projectGrid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
