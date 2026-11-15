@@ -46,4 +46,11 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => { 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const contactForm = document.querySelector('.contact-form');
 if (location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') contactForm.addEventListener('submit', event => { event.preventDefault(); const data = new FormData(contactForm); const subject = encodeURIComponent(`Portfolio enquiry: ${data.get('interest')}`); const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\n${data.get('message')}`); location.href = `mailto:vivianigbokweify@gmail.com?subject=${subject}&body=${body}`; });
-loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
+function applyEditableCopy(copy) {
+  if (!copy) return;
+  document.querySelectorAll('[data-content-field]').forEach(element => {
+    const key = element.dataset.contentField;
+    if (typeof copy[key] === 'string' && copy[key].trim()) element.textContent = copy[key];
+  });
+}
+loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; applyEditableCopy(content.site_copy); renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
