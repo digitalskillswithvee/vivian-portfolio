@@ -255,5 +255,15 @@
       "note": "Self-initiated concept project. The workflow is illustrative and should be adapted to each company's policies and tools."
     }
   ],
-  "testimonials": []
+  "testimonials": [],
+  "site_copy": {
+    "hero_intro": "I'm Vivian Igbokwe, a social media & content strategist and customer experience specialist with 3+ years of experience helping brands show up with clarity, creativity and consistency.",
+    "intro_statement": "I bring the ideas, the execution and the human touch. From scroll-stopping content to customer conversations, I help brands create digital experiences people remember.",
+    "approach_intro": "I like work that looks good, makes sense and serves a real purpose. My process is collaborative, curious and grounded in what the audience actually needs.",
+    "about_lead": "A curious communicator with a soft spot for good stories, thoughtful systems and work that makes people's lives a little easier.",
+    "about_paragraph_1": "My background is in English Language and Education, and I bring 3+ years of hands-on experience across social media management, content creation, community management and customer support. I have worked with clients, teams and online communities across different time zones, adapting communication, handovers and delivery to keep work moving. I am comfortable with remote collaboration and asynchronous workflows. I've supported brands and digital communities, helped people navigate products and processes, and created content designed to connect with real audiences.",
+    "about_paragraph_2": "I enjoy the balance between creative thinking and practical execution: understanding what needs to happen, figuring out how to make it happen, and paying attention to the people on the other side.",
+    "zero_to_smm_intro": "Zero to SMM Starter Pack is my beginner-friendly learning product designed to help aspiring social media managers understand the foundations of the work and start practising with more confidence. It brings together structured lessons, practical templates and an implementation pathway.",
+    "contact_intro": "Have a project, a growing team or a business that could use thoughtful creative and customer experience support? I'd love to hear what you're working on."
+  }
 }
