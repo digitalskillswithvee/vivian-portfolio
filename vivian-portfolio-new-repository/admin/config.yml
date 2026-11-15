@@ -1,9 +1,11 @@
 
 backend:
-repo: digitalskillswithvee/vivian-portfolio
+  name: github
+  repo: digitalskillswithvee/vivian-portfolio
   branch: main
+  root_dir: vivian-portfolio-new-repository
 
-media_folder: "vivian-portfolio-new-repository/assets/uploads"
+media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
@@ -12,7 +14,7 @@ collections:
     files:
       - name: main
         label: Website Content
-        file: vivian-portfolio-new-repository/content/portfolio.json
+        file: content/portfolio.json
         format: json
         fields:
           - name: portrait
