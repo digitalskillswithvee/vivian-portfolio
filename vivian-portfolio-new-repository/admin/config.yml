@@ -1,10 +1,11 @@
+
 backend:
   name: github
   repo: digitalskillswithvee/vivian_portfolio
   branch: main
 
-media_folder: /assets/uploads
-public_folder: /assets/uploads
+media_folder: "vivian-portfolio-new-repository/assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: portfolio
@@ -12,47 +13,61 @@ collections:
     files:
       - name: main
         label: Website Content
-        file: content/portfolio.json
+        file: vivian-portfolio-new-repository/content/portfolio.json
         format: json
         fields:
           - name: portrait
             label: Main Profile Photo
             widget: image
-            hint: This is the large portrait in the homepage introduction.
+            required: false
+
           - name: about_portrait
             label: About Section Photo
             widget: image
-            hint: This is the second photo in the About section.
+            required: false
+
           - name: projects
             label: Projects and Case Studies
             label_singular: Project
             widget: list
+            required: false
             fields:
-              - { name: id, label: Internal ID, widget: string, hint: Keep this short and unique, e.g. new-client-project }
-              - { name: category, label: Project Category, widget: select, options: [{label: Social Media, value: social}, {label: Customer Experience, value: experience}, {label: Creative and UGC, value: creative}, {label: Concept Project, value: concept}] }
-              - { name: kicker, label: Small Category Label, widget: string }
-              - { name: title, label: Project Title, widget: string }
-              - { name: client, label: Client or Project Type, widget: string }
-              - { name: year, label: Year, widget: string }
+              - { name: id, label: Internal ID, widget: string, required: false }
+              - name: category
+                label: Project Category
+                widget: select
+                required: false
+                options:
+                  - { label: Social Media, value: social }
+                  - { label: Customer Experience, value: experience }
+                  - { label: Creative and UGC, value: creative }
+                  - { label: Concept Project, value: concept }
+              - { name: kicker, label: Small Category Label, widget: string, required: false }
+              - { name: title, label: Project Title, widget: string, required: false }
+              - { name: client, label: Client or Project Type, widget: string, required: false }
+              - { name: year, label: Year, widget: string, required: false }
               - { name: image, label: Project Cover Image, widget: image, required: false }
               - { name: image_alt, label: Image Description, widget: string, required: false }
-              - { name: video, label: Project Video (Optional), widget: file, required: false }
-              - { name: video_caption, label: Video Caption (Optional), widget: string, required: false }
-              - { name: summary, label: Short Introduction, widget: text }
+              - { name: video, label: Project Video, widget: file, required: false }
+              - { name: video_caption, label: Video Caption, widget: string, required: false }
+              - { name: summary, label: Short Introduction, widget: text, required: false }
               - name: sections
                 label: Case Study Sections
                 label_singular: Section
                 widget: list
+                required: false
                 fields:
-                  - { name: heading, label: Section Heading, widget: string }
-                  - { name: body, label: Section Text, widget: text }
+                  - { name: heading, label: Section Heading, widget: string, required: false }
+                  - { name: body, label: Section Text, widget: text, required: false }
               - { name: note, label: Closing Note, widget: text, required: false }
+
           - name: testimonials
             label: Testimonials
             label_singular: Testimonial
             widget: list
+            required: false
             fields:
-              - { name: quote, label: Testimonial, widget: text }
-              - { name: name, label: Person's Name, widget: string }
-              - { name: role, label: Role and Organisation, widget: string }
-              - { name: featured, label: Highlight This Testimonial, widget: boolean, default: false }
+              - { name: quote, label: Testimonial, widget: text, required: false }
+              - { name: name, label: Person's Name, widget: string, required: false }
+              - { name: role, label: Role and Organisation, widget: string, required: false }
+              - { name: featured, label: Highlight This Testimonial, widget: boolean, required: false, default: false }
