@@ -1,5 +1,5 @@
 {
-  "portrait": "assets/images/vivian-portrait-placeholder.svg",
+  "portrait": "/assets/uploads/profile picture.jpeg",
   "about_portrait": "assets/images/about-portrait-placeholder.svg",
   "projects": [
     {
@@ -11,6 +11,8 @@
       "year": "2025—26",
       "image": "assets/images/project-media.svg",
       "image_alt": "Media brand case study visual placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "A media and commentary brand supported across multiple social platforms, with a focus on content direction, consistency and learning from performance.",
       "sections": [
         {
@@ -45,6 +47,8 @@
       "year": "2025—26",
       "image": "assets/images/project-fashion.svg",
       "image_alt": "Fashion brand content placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "Supporting fashion and lifestyle brands with content execution and social media communication that feels recognisable, relevant and aligned with the brand.",
       "sections": [
         {
@@ -79,6 +83,8 @@
       "year": "2026",
       "image": "assets/images/project-community.svg",
       "image_alt": "Community management project placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "Helping a digital community move from first contact to confident participation through clear communication, structured onboarding and responsive support.",
       "sections": [
         {
@@ -113,6 +119,8 @@
       "year": "2026",
       "image": "assets/images/project-video.svg",
       "image_alt": "Video content project placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "Short-form video work that combines a clear opening, natural delivery and a focused message to make content easier to watch and understand.",
       "sections": [
         {
@@ -147,6 +155,8 @@
       "year": "CONCEPT",
       "image": "assets/images/project-campaign.svg",
       "image_alt": "Sample campaign concept placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "A demonstration project showing how I move from audience insight to campaign message, content formats and a practical publishing plan.",
       "sections": [
         {
@@ -181,6 +191,8 @@
       "year": "2026",
       "image": "",
       "image_alt": "",
+      "video": "",
+      "video_caption": "",
       "summary": "A beginner-focused learning product created to help aspiring social media managers understand the foundations of the role and begin practising with structure.",
       "sections": [
         {
@@ -215,6 +227,8 @@
       "year": "CONCEPT",
       "image": "assets/images/project-support.svg",
       "image_alt": "Customer support workflow placeholder",
+      "video": "",
+      "video_caption": "",
       "summary": "A sample customer-support workflow designed to make responses more consistent while keeping the experience personal and useful.",
       "sections": [
         {
