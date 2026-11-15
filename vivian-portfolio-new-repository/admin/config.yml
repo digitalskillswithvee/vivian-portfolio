@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: digitalskillswithvee/vivian-portfolio
+  repo: digitalskillswithvee/vivian_portfolio
   branch: main
 
 media_folder: /assets/uploads
