@@ -79,7 +79,7 @@ collections:
               - { name: year, label: Year, widget: string, required: false }
               - { name: image, label: Project Cover Image, widget: image, required: false }
               - { name: image_alt, label: Image Description, widget: string, required: false }
-              - { name: video, label: Project Video, widget: file, required: false }
+              - { name: video, label: Project Video Link, widget: string, required: false, hint: Paste a public video URL from YouTube, Vimeo, TikTok, Instagram, Facebook, or a direct MP4 link. }
               - { name: video_caption, label: Video Caption, widget: string, required: false }
               - { name: summary, label: Short Introduction, widget: text, required: false }
               - name: sections
