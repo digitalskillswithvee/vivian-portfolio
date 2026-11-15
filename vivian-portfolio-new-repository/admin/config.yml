@@ -29,6 +29,23 @@ collections:
               - { name: about_paragraph_2, label: About Paragraph Two, widget: text, required: false }
               - { name: zero_to_smm_intro, label: Zero to SMM Introduction, widget: text, required: false }
               - { name: contact_intro, label: Contact Introduction, widget: text, required: false }
+              - { name: announcement_text, label: announcement text, widget: text, required: false }
+              - { name: announcement_location, label: announcement location, widget: text, required: false }
+              - { name: hero_eyebrow, label: hero eyebrow, widget: text, required: false }
+              - { name: intro_eyebrow, label: intro eyebrow, widget: text, required: false }
+              - { name: work_intro, label: work intro, widget: text, required: false }
+              - { name: step_1_title, label: step 1 title, widget: text, required: false }
+              - { name: step_1_body, label: step 1 body, widget: text, required: false }
+              - { name: step_2_title, label: step 2 title, widget: text, required: false }
+              - { name: step_2_body, label: step 2 body, widget: text, required: false }
+              - { name: step_3_title, label: step 3 title, widget: text, required: false }
+              - { name: step_3_body, label: step 3 body, widget: text, required: false }
+              - { name: step_4_title, label: step 4 title, widget: text, required: false }
+              - { name: step_4_body, label: step 4 body, widget: text, required: false }
+              - { name: testimonials_intro, label: testimonials intro, widget: text, required: false }
+              - { name: timezone_intro, label: timezone intro, widget: text, required: false }
+              - { name: zero_to_smm_extra, label: zero to smm extra, widget: text, required: false }
+              - { name: capabilities_intro, label: capabilities intro, widget: text, required: false }
 
           - name: portrait
             label: Main Profile Photo
