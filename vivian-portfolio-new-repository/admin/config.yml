@@ -1,6 +1,6 @@
 
 backend:
- repo: digitalskillswithvee/vivian-portfolio
+repo: digitalskillswithvee/vivian-portfolio
   branch: main
 
 media_folder: "vivian-portfolio-new-repository/assets/uploads"
