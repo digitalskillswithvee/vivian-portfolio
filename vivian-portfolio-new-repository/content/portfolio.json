@@ -1,0 +1,245 @@
+{
+  "portrait": "assets/images/vivian-portrait-placeholder.svg",
+  "about_portrait": "assets/images/about-portrait-placeholder.svg",
+  "projects": [
+    {
+      "id": "what",
+      "category": "social",
+      "kicker": "SOCIAL MEDIA · STRATEGY · PERFORMANCE REPORTING",
+      "title": "Building a more intentional digital presence",
+      "client": "MEDIA & COMMENTARY BRAND",
+      "year": "2025—26",
+      "image": "assets/images/project-media.svg",
+      "image_alt": "Media brand case study visual placeholder",
+      "summary": "A media and commentary brand supported across multiple social platforms, with a focus on content direction, consistency and learning from performance.",
+      "sections": [
+        {
+          "heading": "The context",
+          "body": "The brand needed consistent publishing and a clearer understanding of which content formats and topics were connecting with its audience."
+        },
+        {
+          "heading": "My contribution",
+          "body": "Social media management, content coordination, caption development, platform publishing, performance monitoring and monthly reporting. Replace this summary with the exact platforms, dates and responsibilities you personally handled."
+        },
+        {
+          "heading": "The thinking",
+          "body": "I paid attention to how different topics performed across platforms, identified stronger audience responses and used those observations to inform content recommendations."
+        },
+        {
+          "heading": "Evidence & outcomes",
+          "body": "Add approved platform screenshots, links to published posts and the original reporting period. One previously reported Facebook post reached 69.8K views, and a reported YouTube period recorded +532 subscribers. Verify dates and attribution before publishing these figures."
+        },
+        {
+          "heading": "What I'd improve next",
+          "body": "Build a repeatable content testing rhythm, connect each content pillar to a clear audience need and use reporting to guide the next month's creative decisions."
+        }
+      ],
+      "note": "Client work. Confirm the client name, permission to display assets and exact reporting dates before publishing."
+    },
+    {
+      "id": "fashion",
+      "category": "social",
+      "kicker": "SOCIAL MEDIA · CONTENT · BRAND COMMUNICATION",
+      "title": "Creating a consistent brand voice",
+      "client": "FASHION & LIFESTYLE",
+      "year": "2025—26",
+      "image": "assets/images/project-fashion.svg",
+      "image_alt": "Fashion brand content placeholder",
+      "summary": "Supporting fashion and lifestyle brands with content execution and social media communication that feels recognisable, relevant and aligned with the brand.",
+      "sections": [
+        {
+          "heading": "The context",
+          "body": "A fashion brand needs a steady stream of content that communicates product value, gives customers useful information and keeps the brand present between promotions."
+        },
+        {
+          "heading": "My contribution",
+          "body": "Add the exact account, platforms, content formats and dates you managed. Potential evidence includes content calendars, approved captions, campaign posts and community engagement examples."
+        },
+        {
+          "heading": "The creative approach",
+          "body": "Show how you translated product details into customer-facing messages, balanced promotional and non-promotional content and maintained consistency."
+        },
+        {
+          "heading": "Evidence & outcomes",
+          "body": "Replace this section with real content examples, reach or engagement figures and client feedback. Do not add metrics unless you can verify them."
+        },
+        {
+          "heading": "What I'd improve next",
+          "body": "Use recurring content formats, customer questions and product education to build a more useful content mix."
+        }
+      ],
+      "note": "Client work. Add only approved brand materials and results that can be attributed to your work."
+    },
+    {
+      "id": "golden",
+      "category": "experience",
+      "kicker": "COMMUNITY MANAGEMENT · CUSTOMER SUPPORT · ONBOARDING",
+      "title": "Making onboarding feel clear and human",
+      "client": "DIGITAL COMMUNITY",
+      "year": "2026",
+      "image": "assets/images/project-community.svg",
+      "image_alt": "Community management project placeholder",
+      "summary": "Helping a digital community move from first contact to confident participation through clear communication, structured onboarding and responsive support.",
+      "sections": [
+        {
+          "heading": "The context",
+          "body": "A growing digital community needs clear entry points, consistent information and a dependable way to handle questions as new people join."
+        },
+        {
+          "heading": "My contribution",
+          "body": "Your experience included welcoming and onboarding participants, explaining processes, responding to questions, supporting training sessions, tracking participant progress and escalating issues when needed."
+        },
+        {
+          "heading": "The approach",
+          "body": "Keep instructions simple, repeat essential information in accessible formats, guide people to the right next step and maintain a calm, helpful tone when questions arise."
+        },
+        {
+          "heading": "Evidence & outcomes",
+          "body": "Add anonymised screenshots of onboarding messages, training materials, FAQs, community guidelines and any verified participant or response-volume figures."
+        },
+        {
+          "heading": "What I'd improve next",
+          "body": "Create a searchable knowledge base, standardise recurring answers and build a simple tracking process for unresolved questions."
+        }
+      ],
+      "note": "Anonymise participant details and remove private conversations, phone numbers, account identifiers and financial information."
+    },
+    {
+      "id": "ugc",
+      "category": "creative",
+      "kicker": "UGC · SHORT-FORM VIDEO · STORYTELLING",
+      "title": "Turning a message into a watchable story",
+      "client": "CREATOR-LED CONTENT",
+      "year": "2026",
+      "image": "assets/images/project-video.svg",
+      "image_alt": "Video content project placeholder",
+      "summary": "Short-form video work that combines a clear opening, natural delivery and a focused message to make content easier to watch and understand.",
+      "sections": [
+        {
+          "heading": "The brief",
+          "body": "Describe the product, service or message, the audience and the intended action. Include usage rights or campaign context where relevant."
+        },
+        {
+          "heading": "My contribution",
+          "body": "Add your actual role: concept, script, filming, voiceover, editing, on-camera delivery or final revisions. Be specific about what you personally produced."
+        },
+        {
+          "heading": "The creative choices",
+          "body": "Explain the hook, pacing, framing, on-screen text, visual sequence and call to action. Include the original brief if you have permission."
+        },
+        {
+          "heading": "Watch the work",
+          "body": "Replace the video placeholder with your own approved video file or an embed from a platform you control."
+        },
+        {
+          "heading": "What I'd improve next",
+          "body": "Test alternative openings, tighten the first few seconds and make the next action clear without making the delivery feel forced."
+        }
+      ],
+      "note": "Confirm the client's permission and usage-rights period before displaying commissioned UGC publicly."
+    },
+    {
+      "id": "campaign",
+      "category": "concept",
+      "kicker": "SELF-INITIATED CONCEPT · CAMPAIGN STRATEGY",
+      "title": "A launch campaign built around a real audience need",
+      "client": "CAMPAIGN THINKING",
+      "year": "CONCEPT",
+      "image": "assets/images/project-campaign.svg",
+      "image_alt": "Sample campaign concept placeholder",
+      "summary": "A demonstration project showing how I move from audience insight to campaign message, content formats and a practical publishing plan.",
+      "sections": [
+        {
+          "heading": "The brief",
+          "body": "Create a launch campaign for a fictional Nigerian skincare brand introducing a simple daily routine for busy customers."
+        },
+        {
+          "heading": "Audience insight",
+          "body": "The audience wants a routine that feels manageable, clear and worth the money. They need product education before they need another promotional message."
+        },
+        {
+          "heading": "Campaign idea",
+          "body": "A seven-day 'make room for your routine' content series built around one useful product question each day."
+        },
+        {
+          "heading": "Sample deliverables",
+          "body": "Short-form video scripts, carousel outlines, creator brief, caption bank, publishing schedule and a sample paid-social creative."
+        },
+        {
+          "heading": "Measurement plan",
+          "body": "Track video retention, saves, product-page clicks, qualified enquiries and conversion. These are proposed measures, not campaign results."
+        }
+      ],
+      "note": "Self-initiated concept project. This is not a campaign commissioned by or run for a real client."
+    },
+    {
+      "id": "zero",
+      "category": "creative",
+      "kicker": "FOUNDER PROJECT · DIGITAL EDUCATION · PRODUCT DEVELOPMENT",
+      "title": "Building a practical starting point for aspiring social media managers",
+      "client": "PRODUCT DEVELOPMENT · EDUCATION",
+      "year": "2026",
+      "image": "",
+      "image_alt": "",
+      "summary": "A beginner-focused learning product created to help aspiring social media managers understand the foundations of the role and begin practising with structure.",
+      "sections": [
+        {
+          "heading": "The idea",
+          "body": "I wanted to turn practical social media management knowledge into a clear starting point for people who are curious about the field but do not know where to begin."
+        },
+        {
+          "heading": "What I built",
+          "body": "A self-paced learning experience with structured video lessons, practical templates and a 90-day implementation phase designed to help learners move from understanding concepts to applying them."
+        },
+        {
+          "heading": "The experience behind it",
+          "body": "This project brings together my experience as a social media practitioner, content strategist and educator. It also demonstrates curriculum planning, information design, audience understanding and learner experience."
+        },
+        {
+          "heading": "Evidence to add",
+          "body": "Add approved screenshots of the programme, lesson previews, template samples, learner feedback and any verified enrolment or completion figures when available."
+        },
+        {
+          "heading": "Why it belongs in my portfolio",
+          "body": "It shows that I do not only execute social media work for brands. I can also develop a learning product, organise information and create practical resources for a defined audience."
+        }
+      ],
+      "note": "Founder-created programme. Add actual product visuals and learner feedback only when approved and available. Do not imply learner outcomes or sales figures without evidence."
+    },
+    {
+      "id": "support",
+      "category": "concept",
+      "kicker": "SELF-INITIATED CONCEPT · CUSTOMER EXPERIENCE",
+      "title": "A thoughtful support journey from first message to resolution",
+      "client": "CUSTOMER EXPERIENCE",
+      "year": "CONCEPT",
+      "image": "assets/images/project-support.svg",
+      "image_alt": "Customer support workflow placeholder",
+      "summary": "A sample customer-support workflow designed to make responses more consistent while keeping the experience personal and useful.",
+      "sections": [
+        {
+          "heading": "The scenario",
+          "body": "A customer has paid for a digital service but cannot access their account. They have already contacted the business once and are frustrated."
+        },
+        {
+          "heading": "The response principles",
+          "body": "Acknowledge the inconvenience, confirm the relevant details safely, explain the next step and set a realistic expectation for follow-up."
+        },
+        {
+          "heading": "The workflow",
+          "body": "Receive and categorise the enquiry, verify the issue without requesting sensitive credentials, resolve or escalate, confirm the outcome and record the case."
+        },
+        {
+          "heading": "Sample assets",
+          "body": "Add an anonymised ticket example, response templates, escalation matrix, FAQ and a simple support tracker."
+        },
+        {
+          "heading": "Success measures",
+          "body": "Track first response time, resolution time, reopened tickets, customer satisfaction and recurring issue themes."
+        }
+      ],
+      "note": "Self-initiated concept project. The workflow is illustrative and should be adapted to each company's policies and tools."
+    }
+  ],
+  "testimonials": []
+}
