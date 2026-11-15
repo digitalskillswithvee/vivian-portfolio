@@ -17,6 +17,19 @@ collections:
         file: content/portfolio.json
         format: json
         fields:
+          - name: site_copy
+            label: Website Text
+            widget: object
+            fields:
+              - { name: hero_intro, label: Hero Introduction, widget: text, required: false }
+              - { name: intro_statement, label: Intro Statement, widget: text, required: false }
+              - { name: approach_intro, label: My Approach Introduction, widget: text, required: false }
+              - { name: about_lead, label: About Lead, widget: text, required: false }
+              - { name: about_paragraph_1, label: About Paragraph One, widget: text, required: false }
+              - { name: about_paragraph_2, label: About Paragraph Two, widget: text, required: false }
+              - { name: zero_to_smm_intro, label: Zero to SMM Introduction, widget: text, required: false }
+              - { name: contact_intro, label: Contact Introduction, widget: text, required: false }
+
           - name: portrait
             label: Main Profile Photo
             widget: image
