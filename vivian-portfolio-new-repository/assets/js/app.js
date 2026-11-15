@@ -29,10 +29,12 @@ function renderProjectVideo(rawUrl, caption, thumbnail) {
     if (id) embed = `https://player.vimeo.com/video/${encodeURIComponent(id)}`;
   }
   const captionHtml = caption ? `<p class="video-caption">${escapeHTML(caption)}</p>` : '';
+  const coverHtml = cover ? `<img class="project-video-cover" src="${escapeHTML(cover)}" alt="${escapeHTML(caption || 'Project video preview')}" loading="lazy">` : '';
+  const previewLink = cover ? `<a class="project-video-preview" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><img class="project-video-cover" src="${escapeHTML(cover)}" alt="${escapeHTML(caption || 'Project video preview')}" loading="lazy"><span class="project-video-play" aria-hidden="true">▶</span></a>` : '';
   const thumbHtml = thumbnail ? `<img class="project-video-thumbnail" src="${escapeHTML(thumbnail)}" alt="Video preview" loading="lazy">` : '';
   const preview = `<span class="project-video-play" aria-hidden="true">▶</span>`;
   if (thumbnail && !embed && !/\.(mp4|webm|ogg)(?:$|[?#])/i.test(url.href)) return `<div class="project-video-wrap"><a class="project-video-preview" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Watch project video">${thumbHtml}${preview}</a>${captionHtml}<p class="video-caption">Select the preview to watch on the original platform.</p></div>`;
-  if (embed) return `<div class="project-video-wrap"><div class="project-video-frame"><iframe src="${escapeHTML(embed)}" title="Project video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${captionHtml}</div>`;
+  if (embed && host.endsWith('youtube.com') || embed && host === 'youtu.be' || embed && host.endsWith('vimeo.com')) return `<div class="project-video-wrap">${cover ? previewLink : `<div class="project-video-frame"><iframe src="${escapeHTML(embed)}" title="Project video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`}${captionHtml}</div>`;
   if (/\.(mp4|webm|ogg)(?:$|[?#])/i.test(url.href)) return `<div class="project-video-wrap"><video controls playsinline preload="metadata" poster="${escapeHTML(thumbnail || '')}" src="${href}"></video>${captionHtml}</div>`;
   return `<div class="project-video-wrap"><a class="project-video-preview project-video-preview-empty" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Watch project video">${thumbHtml || '<span class="project-video-placeholder">VIDEO PREVIEW</span>'}${preview}</a>${captionHtml}<p class="video-caption">Select the preview to watch on the original platform.</p></div>`;
 }
