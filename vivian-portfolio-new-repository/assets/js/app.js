@@ -122,7 +122,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const contactForm = document.querySelector('.contact-form');
-if (location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') contactForm.addEventListener('submit', event => { event.preventDefault(); const data = new FormData(contactForm); const subject = encodeURIComponent(`Portfolio enquiry: ${data.get('interest')}`); const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\n${data.get('message')}`); location.href = `mailto:vivianigbokweify@gmail.com?subject=${subject}&body=${body}`; });
+contactForm.addEventListener('submit', event => { event.preventDefault(); if (!contactForm.reportValidity()) return; const data = new FormData(contactForm); const subject = encodeURIComponent(`Portfolio enquiry: ${data.get('interest')}`); const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\n${data.get('message')}`); window.location.href = `mailto:vivianigbokweify@gmail.com?subject=${subject}&body=${body}`; });
 function applyEditableCopy(copy) {
   if (!copy) return;
   document.querySelectorAll('[data-content-field]').forEach(element => {
