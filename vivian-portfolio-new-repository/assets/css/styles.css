@@ -29,6 +29,7 @@
 .tool-logo{min-height:100px;background:#fffefa;border:1px solid #e0dfd7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:13px 8px;text-align:center;transition:transform .2s,border-color .2s,box-shadow .2s}
 .tool-logo:hover{transform:translateY(-4px);border-color:var(--forest);box-shadow:0 8px 20px rgba(18,63,53,.08)}
 .tool-logo img{width:34px;height:34px;object-fit:contain}
+.tool-logo img.tool-logo-wordmark{width:88px;height:36px;max-width:100%;object-fit:contain}
 .tool-logo-fallback{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#e7e5dc;color:var(--forest);font:800 17px var(--display)}
 .tool-logo-fallback[hidden]{display:none}
 .tool-logo span:last-child{font:600 10px var(--mono);line-height:1.25;color:var(--ink)}
