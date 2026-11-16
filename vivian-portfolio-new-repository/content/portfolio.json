@@ -11,7 +11,7 @@
     "announcement_text": "Available for select remote opportunities",
     "announcement_location": "Nigeria / Worldwide",
     "hero_eyebrow": "SOCIAL MEDIA · CREATIVE STRATEGY · CUSTOMER EXPERIENCE",
-    "intro_eyebrow": "A LITTLE ABOUT THE WORK",
+    "intro_eyebrow": "A LITTLE ABOUT MY WORK",
     "work_intro": "A selection of work across social media, content, community and customer experience. Each project opens into the thinking, contribution and evidence behind it.",
     "step_1_title": "Understand before creating",
     "step_1_body": "I get familiar with the brand, its audience, its goals and the problem we're trying to solve.",
@@ -242,45 +242,6 @@
         }
       ],
       "note": "Founder-created programme."
-    },
-    {
-      "id": "support",
-      "category": "concept",
-      "kicker": "SELF-INITIATED CONCEPT · CUSTOMER EXPERIENCE",
-      "title": "A thoughtful support journey from first message to resolution",
-      "client": "CUSTOMER EXPERIENCE",
-      "year": "CONCEPT",
-      "image": "assets/images/project-support.svg",
-      "image_alt": "Customer support workflow placeholder",
-      "video": "",
-      "video_thumbnail": "",
-      "video_caption": "",
-      "strategy_document": "",
-      "presentation_link": "",
-      "summary": "A sample customer-support workflow designed to make responses more consistent while keeping the experience personal and useful.",
-      "sections": [
-        {
-          "heading": "The scenario",
-          "body": "A customer has paid for a digital service but cannot access their account. They have already contacted the business once and are frustrated."
-        },
-        {
-          "heading": "The response principles",
-          "body": "Acknowledge the inconvenience, confirm the relevant details safely, explain the next step and set a realistic expectation for follow-up."
-        },
-        {
-          "heading": "The workflow",
-          "body": "Receive and categorise the enquiry, verify the issue without requesting sensitive credentials, resolve or escalate, confirm the outcome and record the case."
-        },
-        {
-          "heading": "Sample assets",
-          "body": "Add an anonymised ticket example, response templates, escalation matrix, FAQ and a simple support tracker."
-        },
-        {
-          "heading": "Success measures",
-          "body": "Track first response time, resolution time, reopened tickets, customer satisfaction and recurring issue themes."
-        }
-      ],
-      "note": "Self-initiated concept project. The workflow is illustrative and should be adapted to each company's policies and tools."
     }
   ],
   "testimonials": []
