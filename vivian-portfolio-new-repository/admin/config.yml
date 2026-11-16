@@ -47,6 +47,12 @@ collections:
               - { name: zero_to_smm_extra, label: zero to smm extra, widget: text, required: false }
               - { name: capabilities_intro, label: capabilities intro, widget: text, required: false }
 
+          - name: cv_file
+            label: CV (PDF)
+            widget: file
+            required: false
+            hint: Upload your latest CV as a PDF here. Replacing this file updates the CV link on your website.
+
           - name: portrait
             label: Main Profile Photo
             widget: image
