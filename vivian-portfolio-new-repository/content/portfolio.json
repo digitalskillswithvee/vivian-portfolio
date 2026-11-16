@@ -245,5 +245,54 @@
       "note": "Founder-created programme."
     }
   ],
-  "testimonials": []
+  "testimonials": [
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.25.56 (1).jpeg",
+      "screenshot_alt": "A snapshot of total subscribers gotten in a month throug strategic content and posting",
+      "name": "",
+      "role": "social media manager| Whatarewedoingsef!",
+      "featured": false
+    },
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.26.00.jpeg",
+      "screenshot_alt": "Review of the Zero to SMM Starter pack",
+      "name": "",
+      "role": "",
+      "featured": false
+    },
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.25.55.jpeg",
+      "screenshot_alt": "Snapshot of the Social media metric for a Tiktok account i managed",
+      "name": "",
+      "role": "SMM| Whatarewedoingsef!",
+      "featured": false
+    },
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.26.00 (1).jpeg",
+      "screenshot_alt": "Review after a one-on-one strategy call with me",
+      "name": "",
+      "role": "Brand strategist",
+      "featured": false
+    },
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.26.01.jpeg",
+      "screenshot_alt": "Client Feedback after setting up their first monthly calendar",
+      "name": "",
+      "role": "",
+      "featured": false
+    },
+    {
+      "quote": "",
+      "screenshot": "/assets/uploads/WhatsApp Image 2026-11-16 at 15.26.02 (2).jpeg",
+      "screenshot_alt": "review after my client's first viral post working with me",
+      "name": "Tosin",
+      "role": "SMM|TOU",
+      "featured": false
+    }
+  ]
 }
