@@ -77,3 +77,21 @@
 .testimonial-screenshot-link{display:block;margin:12px 0 18px;overflow:hidden;border:1px solid var(--line);background:#f5f3ed}
 .testimonial-screenshot{display:block;width:100%;max-height:360px;object-fit:contain}
 @media(max-width:650px){.tool-logo-mark{width:32px;height:32px;font-size:14px}.testimonial-screenshot{max-height:300px}}
+
+
+/* Meet Vivian introduction video section */
+.meet-section{padding:88px 0;background:#123f35;color:#fff}
+.meet-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.meet-video-shell{width:100%;aspect-ratio:16/9;background:#0b2d26;border:1px solid rgba(255,255,255,.18);padding:12px}
+.meet-video-placeholder{height:100%;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:28px;background:radial-gradient(circle at 85% 15%,rgba(242,214,109,.22),transparent 35%),linear-gradient(135deg,#1d5949,#0b2d26)}
+.meet-video-placeholder:after{content:"V.";position:absolute;right:14px;bottom:-48px;font:800 clamp(110px,18vw,190px)/1 var(--display);letter-spacing:-.1em;color:rgba(242,214,109,.12)}
+.meet-play-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--forest);font-size:15px;margin-bottom:16px;padding-left:3px}
+.meet-video-kicker{font:600 9px var(--mono);letter-spacing:.16em;color:var(--yellow);margin-bottom:10px}
+.meet-video-placeholder strong{font:800 clamp(24px,3.5vw,42px)/1.02 var(--display);letter-spacing:-.06em;position:relative;z-index:1}
+.meet-video-placeholder small{font:600 8px var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.7);margin-top:18px}
+.meet-copy .eyebrow{color:var(--yellow)}
+.meet-copy h2{font:800 clamp(38px,5vw,60px)/1.02 var(--display);letter-spacing:-.07em;margin:0 0 18px}
+.meet-copy h2 em{font-style:normal;color:var(--yellow)}
+.meet-copy p:not(.eyebrow){max-width:460px;color:rgba(255,255,255,.82);font-size:14px}
+.meet-copy .text-link{color:#fff;border-bottom-color:var(--yellow)}
+@media(max-width:760px){.meet-section{padding:64px 0}.meet-layout{grid-template-columns:1fr;gap:30px}.meet-video-shell{padding:8px}.meet-video-placeholder{padding:20px}}
