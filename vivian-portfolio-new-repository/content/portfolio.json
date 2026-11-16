@@ -28,6 +28,7 @@
   },
   "portrait": "/assets/uploads/Confident Portrait in Green Suit.png",
   "about_portrait": "/assets/uploads/profile picture.jpeg",
+  "zero_to_smm_image": "",
   "projects": [
     {
       "id": "whatarewedoingsef",
@@ -215,7 +216,7 @@
       "title": "Building a practical starting point for aspiring social media managers",
       "client": "PRODUCT DEVELOPMENT · EDUCATION",
       "year": "2026",
-      "image": "/assets/uploads/Campaign Launch Portfolio Cover.png",
+      "image": "",
       "image_alt": "",
       "video": "https://vm.tiktok.com/ZN853b84x/",
       "video_thumbnail": "",
@@ -244,6 +245,5 @@
       "note": "Founder-created programme."
     }
   ],
-  "testimonials": [],
-  "zero_to_smm_image": ""
+  "testimonials": []
 }
