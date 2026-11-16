@@ -33,6 +33,10 @@ function renderProjectVideo(rawUrl, caption, thumbnail) {
   }
 
   const captionHtml = caption ? '<p class="video-caption">' + escapeHTML(caption) + '</p>' : '';
+  if (host === 'instagram.com' || host.endsWith('.instagram.com')) {
+    const permalink = escapeHTML(url.href.split('?')[0]);
+    return '<div class="project-video-wrap instagram-video-embed"><blockquote class="instagram-media" data-instgrm-permalink="' + permalink + '" data-instgrm-version="14" style="background:#fff;border:0;border-radius:12px;margin:0 auto;max-width:540px;min-width:280px;width:100%;"></blockquote>' + captionHtml + '</div>';
+  }
   if (isDirectVideo) {
     const poster = thumbnail ? ' poster="' + escapeHTML(thumbnail) + '"' : '';
     return '<div class="project-video-wrap"><video controls playsinline preload="metadata"' + poster + ' src="' + href + '"></video>' + captionHtml + '</div>';
@@ -57,8 +61,20 @@ function renderProjects(projects) {
   if (count) count.textContent = String((projects || []).length).padStart(2, '0');
   projectGrid.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
     const project = projectData[button.closest('[data-project]').dataset.project]; if (!project) return;
-    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail || project.image)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
+    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
     dialog.showModal();
+    if (dialogContent.querySelector('.instagram-media')) {
+      if (window.instgrm && window.instgrm.Embeds) {
+        window.instgrm.Embeds.process();
+      } else if (!document.querySelector('script[data-instagram-embed]')) {
+        const embedScript = document.createElement('script');
+        embedScript.src = 'https://www.instagram.com/embed.js';
+        embedScript.async = true;
+        embedScript.dataset.instagramEmbed = 'true';
+        embedScript.onload = () => window.instgrm?.Embeds?.process();
+        document.body.appendChild(embedScript);
+      }
+    }
   }));
   projectGrid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   applyProjectFilter(document.querySelector('.filter-button.active')?.dataset.filter || 'all');
