@@ -57,7 +57,7 @@ function renderProjects(projects) {
   if (count) count.textContent = String((projects || []).length).padStart(2, '0');
   projectGrid.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
     const project = projectData[button.closest('[data-project]').dataset.project]; if (!project) return;
-    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
+    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail || project.image)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
     dialog.showModal();
   }));
   projectGrid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
