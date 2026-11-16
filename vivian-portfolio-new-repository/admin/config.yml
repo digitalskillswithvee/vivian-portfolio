@@ -56,6 +56,12 @@ collections:
             widget: image
             required: false
 
+          - name: zero_to_smm_image
+            label: Zero to SMM Section Image
+            widget: image
+            required: false
+            hint: Upload the image displayed in the Zero to SMM section on the website.
+
           - name: projects
             label: Projects and Case Studies
             label_singular: Project
@@ -101,6 +107,8 @@ collections:
             required: false
             fields:
               - { name: quote, label: Testimonial, widget: text, required: false }
+              - { name: screenshot, label: Testimonial Screenshot, widget: image, required: false, hint: Upload a screenshot of the original feedback if you have permission to share it. }
+              - { name: screenshot_alt, label: Screenshot Description, widget: string, required: false }
               - { name: name, label: Person's Name, widget: string, required: false }
               - { name: role, label: Role and Organisation, widget: string, required: false }
               - { name: featured, label: Highlight This Testimonial, widget: boolean, required: false, default: false }
