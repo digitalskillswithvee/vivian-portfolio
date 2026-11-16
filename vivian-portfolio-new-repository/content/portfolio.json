@@ -41,6 +41,8 @@
       "video": "https://youtu.be/UzUOFYoEmxc?si=wXj8s9O-XPppS3x6",
       "video_thumbnail": "",
       "video_caption": "Are women asking for too much?",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "A media and commentary brand supported across multiple social platforms, with a focus on content direction, consistency and learning from performance.",
       "sections": [
         {
@@ -78,6 +80,8 @@
       "video": "https://www.instagram.com/reel/DYK4DqayMnc/?psln=MTNqeWJ6OWx4ZHo0Mw==",
       "video_thumbnail": "",
       "video_caption": "GRWM Modesty Edition",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "Supporting TOU with content execution and social media communication that feels recognisable, relevant and aligned with the brand.",
       "sections": [
         {
@@ -115,6 +119,8 @@
       "video": "",
       "video_thumbnail": "/assets/uploads/GoldenStride_ Walk Earn Live Better.png",
       "video_caption": "Meridian Assets-Golden Stride",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "Helping a digital community move from first contact to confident participation through clear communication, structured onboarding and responsive support.",
       "sections": [
         {
@@ -152,6 +158,8 @@
       "video": "https://vm.tiktok.com/ZN85sJvE3/",
       "video_thumbnail": "",
       "video_caption": "Free Digital skills websites every Beginner should know about!",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "A Short-form video work that combines a clear opening, natural delivery and a focused message to make content easier to watch and understand.",
       "sections": [
         {
@@ -180,36 +188,22 @@
     {
       "id": "campaign",
       "category": "concept",
-      "kicker": "SELF-INITIATED CONCEPT · CAMPAIGN STRATEGY",
+      "kicker": "· CAMPAIGN STRATEGY",
       "title": "A launch campaign built around a real audience need",
       "client": "CAMPAIGN THINKING",
-      "year": "CONCEPT",
+      "year": "2026",
       "image": "assets/images/project-campaign.svg",
-      "image_alt": "Sample campaign concept placeholder",
-      "video": "",
+      "image_alt": "A 90 day strategy calendar for TOU",
+      "video": "https://www.instagram.com/reel/DctfpKwit7X/?mdxt=emY2dGNxY2kxOG51",
       "video_thumbnail": "",
-      "video_caption": "",
-      "summary": "A demonstration project showing how I move from audience insight to campaign message, content formats and a practical publishing plan.",
+      "video_caption": "THE COMEBACK OF ELLA DRESS",
+      "strategy_document": "assets/uploads/TOU 90-Day Brand & Social Media Strategy.pdf",
+      "presentation_link": "https://docs.google.com/presentation/d/1Y8A2TXL_K6Tz_6TlwxH_Gss_yT2k2JXgx0Q8aSaPIck/edit?usp=drivesdk",
+      "summary": "I developed a content series strategy as part of my approach to onboarding and beginning work with a brand. The goal was to create a more intentional and structured direction for its content.",
       "sections": [
         {
-          "heading": "The brief",
-          "body": "Create a launch campaign for a fictional Nigerian skincare brand introducing a simple daily routine for busy customers."
-        },
-        {
-          "heading": "Audience insight",
-          "body": "The audience wants a routine that feels manageable, clear and worth the money. They need product education before they need another promotional message."
-        },
-        {
-          "heading": "Campaign idea",
-          "body": "A seven-day 'make room for your routine' content series built around one useful product question each day."
-        },
-        {
-          "heading": "Sample deliverables",
-          "body": "Short-form video scripts, carousel outlines, creator brief, caption bank, publishing schedule and a sample paid-social creative."
-        },
-        {
-          "heading": "Measurement plan",
-          "body": "Track video retention, saves, product-page clicks, qualified enquiries and conversion. These are proposed measures, not campaign results."
+          "heading": "Adspero | Social Media & Content Strategy Proposal",
+          "body": "I prepared a strategic proposal for Adspero, outlining how its social media content could be structured and developed to create a clearer, more intentional digital presence."
         }
       ],
       "note": "Self-initiated concept project. This is not a campaign commissioned by or run for a real client."
@@ -226,6 +220,8 @@
       "video": "",
       "video_thumbnail": "",
       "video_caption": "",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "A beginner-focused learning product created to help aspiring social media managers understand the foundations of the role and begin practising with structure.",
       "sections": [
         {
@@ -263,6 +259,8 @@
       "video": "",
       "video_thumbnail": "",
       "video_caption": "",
+      "strategy_document": "",
+      "presentation_link": "",
       "summary": "A sample customer-support workflow designed to make responses more consistent while keeping the experience personal and useful.",
       "sections": [
         {
