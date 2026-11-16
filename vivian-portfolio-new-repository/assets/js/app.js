@@ -103,7 +103,12 @@ function renderProjects(projects) {
 function renderTestimonials(items) {
   const grid = document.getElementById('testimonial-grid');
   if (!items?.length) { grid.innerHTML = '<p class="testimonial-empty">Client and colleague feedback will appear here as approved testimonials are added.</p>'; return; }
-  grid.innerHTML = items.map(item => `<blockquote class="testimonial-card ${item.featured ? 'testimonial-featured' : ''} reveal"><span class="quote-mark">“</span><p>${escapeHTML(item.quote)}</p><footer><span class="avatar-initial">${escapeHTML((item.name || 'V').trim().charAt(0).toUpperCase())}</span><span><strong>${escapeHTML(item.name)}</strong><small>${escapeHTML(item.role)}</small></span></footer></blockquote>`).join('');
+  grid.innerHTML = items.map(item => {
+    const screenshot = item.screenshot ? `<a class="testimonial-screenshot-link" href="${escapeHTML(item.screenshot)}" target="_blank" rel="noopener noreferrer"><img class="testimonial-screenshot" src="${escapeHTML(item.screenshot)}" alt="${escapeHTML(item.screenshot_alt || 'Screenshot of testimonial feedback')}" loading="lazy"></a>` : '';
+    const quote = item.quote ? `<p>${escapeHTML(item.quote)}</p>` : '';
+    const attribution = (item.name || item.role) ? `<footer><span class="avatar-initial">${escapeHTML((item.name || 'V').trim().charAt(0).toUpperCase())}</span><span><strong>${escapeHTML(item.name)}</strong><small>${escapeHTML(item.role)}</small></span></footer>` : '';
+    return `<blockquote class="testimonial-card ${item.featured ? 'testimonial-featured' : ''} reveal"><span class="quote-mark">“</span>${screenshot}${quote}${attribution}</blockquote>`;
+  }).join('');
   grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 function applyProjectFilter(filter) { document.querySelectorAll('.project-card').forEach(card => { card.hidden = filter !== 'all' && card.dataset.category !== filter; }); }
@@ -125,4 +130,4 @@ function applyEditableCopy(copy) {
     if (typeof copy[key] === 'string' && copy[key].trim()) element.textContent = copy[key];
   });
 }
-loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; applyEditableCopy(content.site_copy); renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
+loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; const zeroImage = document.getElementById('zero-to-smm-image'); if (content.zero_to_smm_image && zeroImage) zeroImage.src = content.zero_to_smm_image; applyEditableCopy(content.site_copy); renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
