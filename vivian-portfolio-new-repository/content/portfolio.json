@@ -27,6 +27,7 @@
     "zero_to_smm_extra": "This is part of my work as a practitioner who also builds educational resources, thinks about learner experience and turns knowledge into practical tools.",
     "capabilities_intro": "I'm comfortable moving between creative execution, customer conversations and the practical coordination that helps a team keep moving."
   },
+  "cv_file": "/assets/uploads/Vivian_Igbokwe_Master_Career_Profile_Updated.docx",
   "portrait": "/assets/uploads/Confident Portrait in Green Suit.png",
   "about_portrait": "/assets/uploads/profile picture.jpeg",
   "zero_to_smm_image": "/assets/uploads/mmm.jpeg",
@@ -295,6 +296,5 @@
       "role": "SMM|TOU",
       "featured": false
     }
-  ],
-  "cv_file": ""
+  ]
 }
