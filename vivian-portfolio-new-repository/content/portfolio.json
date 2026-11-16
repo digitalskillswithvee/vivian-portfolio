@@ -192,7 +192,7 @@
       "title": "A launch campaign built around a real audience need",
       "client": "CAMPAIGN THINKING",
       "year": "2026",
-      "image": "assets/images/project-campaign.svg",
+      "image": "/assets/uploads/Campaign Launch Portfolio Cover.png",
       "image_alt": "A 90 day strategy calendar for TOU",
       "video": "https://www.instagram.com/reel/DctfpKwit7X/?mdxt=emY2dGNxY2kxOG51",
       "video_thumbnail": "",
@@ -206,7 +206,7 @@
           "body": "I prepared a strategic proposal for Adspero, outlining how its social media content could be structured and developed to create a clearer, more intentional digital presence."
         }
       ],
-      "note": "Self-initiated concept project. This is not a campaign commissioned by or run for a real client."
+      "note": "Adspero is a Self-initiated concept project. This is not a campaign commissioned by or run for a real client."
     },
     {
       "id": "zero",
@@ -215,13 +215,13 @@
       "title": "Building a practical starting point for aspiring social media managers",
       "client": "PRODUCT DEVELOPMENT · EDUCATION",
       "year": "2026",
-      "image": "",
+      "image": "/assets/uploads/Campaign Launch Portfolio Cover.png",
       "image_alt": "",
-      "video": "",
+      "video": "https://vm.tiktok.com/ZN853b84x/",
       "video_thumbnail": "",
-      "video_caption": "",
+      "video_caption": "What to know before applying for any remote job",
       "strategy_document": "",
-      "presentation_link": "",
+      "presentation_link": "https://nestuge.com/zerotosmm",
       "summary": "A beginner-focused learning product created to help aspiring social media managers understand the foundations of the role and begin practising with structure.",
       "sections": [
         {
@@ -237,15 +237,11 @@
           "body": "This project brings together my experience as a social media practitioner, content strategist and educator. It also demonstrates curriculum planning, information design, audience understanding and learner experience."
         },
         {
-          "heading": "Evidence to add",
-          "body": "Add approved screenshots of the programme, lesson previews, template samples, learner feedback and any verified enrolment or completion figures when available."
-        },
-        {
           "heading": "Why it belongs in my portfolio",
           "body": "It shows that I do not only execute social media work for brands. I can also develop a learning product, organise information and create practical resources for a defined audience."
         }
       ],
-      "note": "Founder-created programme. Add actual product visuals and learner feedback only when approved and available. Do not imply learner outcomes or sales figures without evidence."
+      "note": "Founder-created programme."
     },
     {
       "id": "support",
