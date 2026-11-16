@@ -123,6 +123,20 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => { 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', event => { event.preventDefault(); if (!contactForm.reportValidity()) return; const data = new FormData(contactForm); const subject = encodeURIComponent(`Portfolio enquiry: ${data.get('interest')}`); const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nInterest: ${data.get('interest')}\n\n${data.get('message')}`); window.location.href = `mailto:vivianigbokweify@gmail.com?subject=${subject}&body=${body}`; });
+function renderMeetVideo(rawUrl) {
+  const shell = document.querySelector('.meet-video-shell');
+  if (!shell) return;
+  let url;
+  try { url = new URL(String(rawUrl || '').trim()); } catch { return; }
+  if (url.protocol !== 'https:' && url.protocol !== 'http:') return;
+  const host = url.hostname.replace(/^www\./, '').toLowerCase();
+  let videoId = '';
+  if (host === 'youtu.be') videoId = url.pathname.split('/').filter(Boolean)[0] || '';
+  else if (host === 'youtube.com' || host.endsWith('.youtube.com')) videoId = url.searchParams.get('v') || (url.pathname.match(/\/(?:shorts|embed)\/([^/?]+)/) || [])[1] || '';
+  if (!videoId || !/^[A-Za-z0-9_-]{6,}$/.test(videoId)) return;
+  shell.removeAttribute('aria-label');
+  shell.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '" title="Meet Vivian Igbokwe introduction video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+}
 function applyEditableCopy(copy) {
   if (!copy) return;
   document.querySelectorAll('[data-content-field]').forEach(element => {
@@ -130,4 +144,4 @@ function applyEditableCopy(copy) {
     if (typeof copy[key] === 'string' && copy[key].trim()) element.textContent = copy[key];
   });
 }
-loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; const zeroImage = document.getElementById('zero-to-smm-image'); if (content.zero_to_smm_image && zeroImage) zeroImage.src = content.zero_to_smm_image; applyEditableCopy(content.site_copy); renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
+loadPortfolioContent().then(content => { if (!content) return; if (content.portrait) document.getElementById('hero-portrait').src = content.portrait; if (content.about_portrait) document.getElementById('about-portrait').src = content.about_portrait; const zeroImage = document.getElementById('zero-to-smm-image'); if (content.zero_to_smm_image && zeroImage) zeroImage.src = content.zero_to_smm_image; applyEditableCopy(content.site_copy); renderMeetVideo(content.site_copy?.intro_video_url); renderProjects(content.projects || []); renderTestimonials(content.testimonials || []); });
