@@ -57,10 +57,10 @@ collections:
             required: false
 
           - name: zero_to_smm_image
-            label: Zero to SMM Section Image
+            label: Builder · Educator · Creative Section Image
             widget: image
             required: false
-            hint: This controls the image beside “Turning what I know into something others can use.” Upload a replacement here.
+            hint: This is the image beside “Turning what I know into something others can use.” Upload your virtual seminar / Zero to SMM image here.
 
           - name: projects
             label: Projects and Case Studies
