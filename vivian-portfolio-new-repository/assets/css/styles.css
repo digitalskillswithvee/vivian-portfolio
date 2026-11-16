@@ -82,7 +82,7 @@
 /* Meet Vivian introduction video section */
 .meet-section{padding:88px 0;background:#123f35;color:#fff}
 .meet-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.meet-video-shell{width:100%;aspect-ratio:16/9;background:#0b2d26;border:1px solid rgba(255,255,255,.18);padding:12px}
+.meet-video-shell{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:#0b2d26;border:1px solid rgba(255,255,255,.18);padding:0}.meet-video-shell iframe{display:block;width:100%;height:100%;border:0}
 .meet-video-placeholder{height:100%;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:28px;background:radial-gradient(circle at 85% 15%,rgba(242,214,109,.22),transparent 35%),linear-gradient(135deg,#1d5949,#0b2d26)}
 .meet-video-placeholder:after{content:"V.";position:absolute;right:14px;bottom:-48px;font:800 clamp(110px,18vw,190px)/1 var(--display);letter-spacing:-.1em;color:rgba(242,214,109,.12)}
 .meet-play-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--forest);font-size:15px;margin-bottom:16px;padding-left:3px}
@@ -94,4 +94,4 @@
 .meet-copy h2 em{font-style:normal;color:var(--yellow)}
 .meet-copy p:not(.eyebrow){max-width:460px;color:rgba(255,255,255,.82);font-size:14px}
 .meet-copy .text-link{color:#fff;border-bottom-color:var(--yellow)}
-@media(max-width:760px){.meet-section{padding:64px 0}.meet-layout{grid-template-columns:1fr;gap:30px}.meet-video-shell{padding:8px}.meet-video-placeholder{padding:20px}}
+@media(max-width:760px){.meet-section{padding:64px 0}.meet-layout{grid-template-columns:1fr;gap:30px}.meet-video-shell{padding:0}.meet-video-placeholder{padding:20px}}
