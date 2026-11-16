@@ -49,6 +49,27 @@ function renderProjectVideo(rawUrl, caption, thumbnail) {
   }
   return '<div class="project-video-wrap"><a class="project-video-preview project-video-preview-empty" href="' + href + '" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><span class="project-video-placeholder">VIDEO PREVIEW</span><span class="project-video-play" aria-hidden="true">▶</span></a>' + captionHtml + '<p class="video-caption">Select the preview to watch on the original platform.</p></div>';
 }
+function renderProjectResources(project) {
+  const resources = [];
+  const documentPath = typeof project.strategy_document === 'string' ? project.strategy_document.trim() : '';
+  if (documentPath) {
+    let safeDocument = '';
+    try {
+      const parsed = new URL(documentPath, window.location.origin);
+      if (parsed.origin === window.location.origin && parsed.pathname.startsWith('/assets/uploads/')) safeDocument = parsed.href;
+      else if (parsed.protocol === 'https:' || parsed.protocol === 'http:') safeDocument = parsed.href;
+    } catch {}
+    if (safeDocument) resources.push('<a class="project-resource-link" href="' + escapeHTML(safeDocument) + '" target="_blank" rel="noopener noreferrer">View strategy document (PDF) ↗</a>');
+  }
+  const presentation = typeof project.presentation_link === 'string' ? project.presentation_link.trim() : '';
+  if (presentation) {
+    try {
+      const parsed = new URL(presentation);
+      if (parsed.protocol === 'https:' || parsed.protocol === 'http:') resources.push('<a class="project-resource-link" href="' + escapeHTML(parsed.href) + '" target="_blank" rel="noopener noreferrer">View presentation ↗</a>');
+    } catch {}
+  }
+  return resources.length ? '<div class="project-resources">' + resources.join('') + '</div>' : '';
+}
 function renderProjects(projects) {
   projectData = {};
   projectGrid.innerHTML = (projects || []).map((project, index) => {
@@ -61,7 +82,7 @@ function renderProjects(projects) {
   if (count) count.textContent = String((projects || []).length).padStart(2, '0');
   projectGrid.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
     const project = projectData[button.closest('[data-project]').dataset.project]; if (!project) return;
-    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
+    dialogContent.innerHTML = `<span class="dialog-kicker">${escapeHTML(project.kicker)}</span><h2>${escapeHTML(project.title)}</h2><p class="dialog-summary">${escapeHTML(project.summary)}</p>${renderProjectVideo(project.video, project.video_caption, project.video_thumbnail)}${renderProjectResources(project)}${(project.sections || []).map(section => `<section><h3>${escapeHTML(section.heading)}</h3><p>${escapeHTML(section.body)}</p></section>`).join('')}<div class="dialog-note">${escapeHTML(project.note || '')}</div><p><a class="text-link" href="#contact" onclick="document.getElementById('project-dialog').close()">Discuss a similar project ↗</a></p>`;
     dialog.showModal();
     if (dialogContent.querySelector('.instagram-media')) {
       if (window.instgrm && window.instgrm.Embeds) {
