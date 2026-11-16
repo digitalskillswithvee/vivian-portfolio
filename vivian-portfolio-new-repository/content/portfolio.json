@@ -110,35 +110,35 @@
       "title": "Making onboarding feel clear and human",
       "client": "DIGITAL COMMUNITY",
       "year": "2026",
-      "image": "assets/images/project-community.svg",
+      "image": "/assets/uploads/aae0ce49-bbb2-40fb-8d78-24a7dec66804.jpg",
       "image_alt": "Community management project placeholder",
       "video": "",
-      "video_thumbnail": "",
-      "video_caption": "",
+      "video_thumbnail": "/assets/uploads/GoldenStride_ Walk Earn Live Better.png",
+      "video_caption": "Meridian Assets-Golden Stride",
       "summary": "Helping a digital community move from first contact to confident participation through clear communication, structured onboarding and responsive support.",
       "sections": [
         {
           "heading": "The context",
-          "body": "A growing digital community needs clear entry points, consistent information and a dependable way to handle questions as new people join."
+          "body": "Golden Stride is a digital trading app developed by Meridian Assets. As the product prepared to reach its users, the team needed support with early research, user onboarding, product education and community engagement."
         },
         {
           "heading": "My contribution",
-          "body": "Your experience included welcoming and onboarding participants, explaining processes, responding to questions, supporting training sessions, tracking participant progress and escalating issues when needed."
+          "body": "Supported early product research, onboarded over 300 users, trained new users and managed a community of over 1,000 members. I also handled customer queries, responded to DMs, created tutorial videos and worked alongside the technical team to resolve user issues."
         },
         {
           "heading": "The approach",
-          "body": "Keep instructions simple, repeat essential information in accessible formats, guide people to the right next step and maintain a calm, helpful tone when questions arise."
+          "body": "Focused on making the user experience clearer and more accessible through structured onboarding, practical video tutorials, responsive communication and ongoing community support."
         },
         {
           "heading": "Evidence & outcomes",
-          "body": "Add anonymised screenshots of onboarding messages, training materials, FAQs, community guidelines and any verified participant or response-volume figures."
+          "body": "300+ users onboarded and guided through the platform.\n\n1,000+ community members supported and managed.\n\nCreated tutorial videos to simplify product education.\n\nSupported the technical team with user feedback and issue resolution.\n\nHelped users navigate the app and understand its features."
         },
         {
           "heading": "What I'd improve next",
-          "body": "Create a searchable knowledge base, standardise recurring answers and build a simple tracking process for unresolved questions."
+          "body": "Develop a more structured self-service support system, expand the tutorial library and introduce a feedback process that helps the product team identify recurring user challenges."
         }
       ],
-      "note": "Anonymise participant details and remove private conversations, phone numbers, account identifiers and financial information."
+      "note": ""
     },
     {
       "id": "ugc",
