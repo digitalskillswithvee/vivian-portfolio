@@ -4,7 +4,7 @@ backend:
   branch: main
   root_dir: vivian-portfolio-new-repository
 
-media_folder: "assets/uploads"
+media_folder: "/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
@@ -57,7 +57,7 @@ collections:
             required: false
 
           - name: zero_to_smm_image
-            label: Zero to SMM Section Image
+            label: Zero to SMM Section Cover Image
             widget: image
             required: false
             hint: Upload the image displayed in the Zero to SMM section on the website.
@@ -87,7 +87,7 @@ collections:
               - { name: video, label: Project Video Link, widget: string, required: false, hint: Paste a public video URL from YouTube, Vimeo, TikTok, Instagram, Facebook, or a direct MP4 link. }
               - { name: video_thumbnail, label: Video Cover Image, widget: image, required: false, hint: Upload a thumbnail image visitors will see before opening or playing the video. }
               - { name: video_caption, label: Video Caption, widget: string, required: false }
-              - { name: strategy_document, label: Strategy Document (PDF), widget: file, required: false, media_folder: assets/uploads, public_folder: /assets/uploads, hint: Upload a PDF strategy or campaign document for visitors to view. }
+              - { name: strategy_document, label: Strategy Document (PDF), widget: file, required: false, hint: Upload a PDF strategy or campaign document for visitors to view. }
               - { name: presentation_link, label: Presentation Link, widget: string, required: false, hint: Paste a viewer-accessible link to a Google Slides or online presentation. }
               - { name: summary, label: Short Introduction, widget: text, required: false }
               - name: sections
