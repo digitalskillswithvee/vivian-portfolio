@@ -14,36 +14,36 @@ function renderProjectVideo(rawUrl, caption, thumbnail) {
   if (!rawUrl) return '';
   let url;
   try { url = new URL(rawUrl.trim()); } catch { return ''; }
-  if (!['http:', 'https:'].includes(url.protocol)) return '';
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') return '';
 
   const href = escapeHTML(url.href);
-  const host = url.hostname.replace(/^www\\./, '').toLowerCase();
-  const isDirectVideo = /\\.(mp4|webm|ogg)(?:$|[?#])/i.test(url.href);
+  const host = url.hostname.replace(/^www\./, '').toLowerCase();
+  const isDirectVideo = /\.(mp4|webm|ogg)(?:$|[?#])/i.test(url.href);
   let embed = '';
 
   if (host === 'youtu.be') {
     const id = url.pathname.split('/').filter(Boolean)[0];
-    if (id) embed = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+    if (id) embed = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id);
   } else if (host === 'youtube.com' || host.endsWith('.youtube.com')) {
-    const id = url.searchParams.get('v') || url.pathname.match(/\\/(?:shorts|embed)\\/([^/?]+)/)?.[1];
-    if (id) embed = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+    const id = url.searchParams.get('v') || (url.pathname.match(/\/(?:shorts|embed)\/([^/?]+)/) || [])[1];
+    if (id) embed = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id);
   } else if (host === 'vimeo.com' || host.endsWith('.vimeo.com')) {
-    const id = url.pathname.match(/\\/(?:video\\/)?(\\d+)/)?.[1];
-    if (id) embed = `https://player.vimeo.com/video/${encodeURIComponent(id)}`;
+    const id = (url.pathname.match(/\/(?:video\/)?(\d+)/) || [])[1];
+    if (id) embed = 'https://player.vimeo.com/video/' + encodeURIComponent(id);
   }
 
-  const captionHtml = caption ? `<p class="video-caption">${escapeHTML(caption)}</p>` : '';
+  const captionHtml = caption ? '<p class="video-caption">' + escapeHTML(caption) + '</p>' : '';
   if (isDirectVideo) {
-    const poster = thumbnail ? ` poster="${escapeHTML(thumbnail)}"` : '';
-    return `<div class="project-video-wrap"><video controls playsinline preload="metadata"${poster} src="${href}"></video>${captionHtml}</div>`;
+    const poster = thumbnail ? ' poster="' + escapeHTML(thumbnail) + '"' : '';
+    return '<div class="project-video-wrap"><video controls playsinline preload="metadata"' + poster + ' src="' + href + '"></video>' + captionHtml + '</div>';
   }
   if (embed && !thumbnail) {
-    return `<div class="project-video-wrap"><div class="project-video-frame"><iframe src="${escapeHTML(embed)}" title="Project video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${captionHtml}</div>`;
+    return '<div class="project-video-wrap"><div class="project-video-frame"><iframe src="' + escapeHTML(embed) + '" title="Project video" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>' + captionHtml + '</div>';
   }
   if (thumbnail) {
-    return `<div class="project-video-wrap"><a class="project-video-preview" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><img class="project-video-thumbnail" src="${escapeHTML(thumbnail)}" alt="${escapeHTML(caption || 'Project video preview')}" loading="lazy"><span class="project-video-play" aria-hidden="true">▶</span></a>${captionHtml}<p class="video-caption">Select the preview to watch on the original platform.</p></div>`;
+    return '<div class="project-video-wrap"><a class="project-video-preview" href="' + href + '" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><img class="project-video-thumbnail" src="' + escapeHTML(thumbnail) + '" alt="' + escapeHTML(caption || 'Project video preview') + '" loading="lazy"><span class="project-video-play" aria-hidden="true">▶</span></a>' + captionHtml + '<p class="video-caption">Select the preview to watch on the original platform.</p></div>';
   }
-  return `<div class="project-video-wrap"><a class="project-video-preview project-video-preview-empty" href="${href}" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><span class="project-video-placeholder">VIDEO PREVIEW</span><span class="project-video-play" aria-hidden="true">▶</span></a>${captionHtml}<p class="video-caption">Select the preview to watch on the original platform.</p></div>`;
+  return '<div class="project-video-wrap"><a class="project-video-preview project-video-preview-empty" href="' + href + '" target="_blank" rel="noopener noreferrer" aria-label="Watch project video"><span class="project-video-placeholder">VIDEO PREVIEW</span><span class="project-video-play" aria-hidden="true">▶</span></a>' + captionHtml + '<p class="video-caption">Select the preview to watch on the original platform.</p></div>';
 }
 function renderProjects(projects) {
   projectData = {};
