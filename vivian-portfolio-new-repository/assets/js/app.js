@@ -126,8 +126,11 @@ contactForm.addEventListener('submit', event => { event.preventDefault(); if (!c
 function renderMeetVideo(rawUrl) {
   const shell = document.querySelector('.meet-video-shell');
   if (!shell) return;
+  const raw = String(rawUrl || '').trim();
+  const match = raw.match(/https?:\/\/[^\s"'<>]+/i);
+  if (!match) return;
   let url;
-  try { url = new URL(String(rawUrl || '').trim()); } catch { return; }
+  try { url = new URL(match[0].replace(/[),.;]+$/, '')); } catch { return; }
   if (url.protocol !== 'https:' && url.protocol !== 'http:') return;
   const host = url.hostname.replace(/^www\./, '').toLowerCase();
   let videoId = '';
